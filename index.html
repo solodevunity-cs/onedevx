@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dirt Kings | Mobile Off-Road Racing Game</title>
+    <title>OneDevX</title>
     <link href="https://fonts.googleapis.com/css2?family=Teko:wght@600;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary-color: #ff9900; /* Vibrant off-road orange accent */
+            --primary-color: #ff9900;
             --bg-color: #0b0c10;
             --card-bg: #1f2833;
             --text-color: #c5c6c7;
@@ -29,26 +29,27 @@
 
         header {
             text-align: center;
-            padding: 4rem 1rem 2rem 1rem;
+            padding: 3.5rem 1rem 2rem 1rem;
             background: linear-gradient(180deg, #151922 0%, var(--bg-color) 100%);
             border-bottom: 2px solid #282c37;
         }
 
-        h1 {
+        header h1 {
             font-family: 'Teko', sans-serif;
-            font-size: 4rem;
+            font-size: 4.5rem;
             text-transform: uppercase;
             color: var(--primary-color);
             margin: 0;
-            letter-spacing: 2px;
+            letter-spacing: 3px;
             line-height: 1;
         }
 
-        p.subtitle {
-            font-size: 1.25rem;
-            color: var(--heading-color);
-            font-weight: 600;
+        header p.subtitle {
+            font-size: 1.1rem;
+            color: var(--text-color);
             margin-top: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
         .container {
@@ -57,9 +58,29 @@
             padding: 2rem 1rem;
         }
 
+        .game-header {
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .game-header h2 {
+            font-family: 'Teko', sans-serif;
+            font-size: 3rem;
+            color: var(--heading-color);
+            margin: 0;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+        }
+
+        .game-header p {
+            margin: 0.2rem 0 0 0;
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
         .video-container {
             position: relative;
-            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            padding-bottom: 56.25%;
             height: 0;
             overflow: hidden;
             border-radius: 12px;
@@ -85,7 +106,7 @@
             border: 1px solid #2d3748;
         }
 
-        h2 {
+        .content-card h3 {
             font-family: 'Teko', sans-serif;
             font-size: 2.2rem;
             color: var(--heading-color);
@@ -154,21 +175,23 @@
             color: #666;
             border-top: 1px solid #1a202c;
         }
-
-        footer a {
-            color: var(--primary-color);
-            text-decoration: none;
-        }
     </style>
 </head>
 <body>
 
+    <!-- Main Page Header -->
     <header>
-        <h1>Dirt Kings</h1>
-        <p class="subtitle">60FPS Mobile Off-Road Racing Game by OneDevX</p>
+        <h1>OneDevX</h1>
+        <p class="subtitle">Indie Game Studio</p>
     </header>
 
     <div class="container">
+        <!-- Featured Game Header -->
+        <div class="game-header">
+            <h2>Dirt Kings</h2>
+            <p>60FPS Mobile Off-Road Racing Game</p>
+        </div>
+
         <!-- Official Game Trailer -->
         <div class="video-container">
             <iframe 
@@ -188,7 +211,7 @@
 
         <!-- Features Overview -->
         <div class="content-card">
-            <h2>Key Game Features</h2>
+            <h3>Key Game Features</h3>
             <ul class="features">
                 <li>
                     <strong>PC-Quality Mobile Graphics</strong>
@@ -207,7 +230,7 @@
     </div>
 
     <footer>
-        <p>&copy; 2026 OneDevX. Built for Android devices.</p>
+        <p>&copy; 2026 OneDevX. All rights reserved.</p>
     </footer>
 
 </body>
