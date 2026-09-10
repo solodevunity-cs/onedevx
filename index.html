@@ -3,118 +3,158 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OneDevX | Indie Game Project</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+    <title>Dirt Kings | Mobile Off-Road Racing Game</title>
+    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@600;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary-color: #ff4655; /* A punchy game-focused accent color (e.g., vibrant red/pink) */
-            --bg-color: #0f1115;
-            --container-bg: #1e222b;
-            --text-color: #e2e8f0;
-            --text-muted: #94a3b8;
+            --primary-color: #ff9900; /* Vibrant off-road orange accent */
+            --bg-color: #0b0c10;
+            --card-bg: #1f2833;
+            --text-color: #c5c6c7;
+            --heading-color: #ffffff;
         }
+        
+        * {
+            box-sizing: border-box;
+        }
+
         body {
-            font-family: 'Poppins', sans-serif;
-            line-height: 1.6;
-            color: var(--text-color);
+            font-family: 'Inter', sans-serif;
             background-color: var(--bg-color);
+            color: var(--text-color);
             margin: 0;
             padding: 0;
+            line-height: 1.6;
         }
+
         header {
-            background-color: #090a0c;
-            background-image: linear-gradient(rgba(9, 10, 12, 0.8), rgba(9, 10, 12, 0.9)), url('https://via.placeholder.com/1920x600/1e222b/ff4655?text=Your+Game+Key+Art+Here');
-            background-size: cover;
-            background-position: center;
-            color: #ffffff;
-            padding: 6rem 1rem;
             text-align: center;
-            border-bottom: 3px solid var(--primary-color);
+            padding: 4rem 1rem 2rem 1rem;
+            background: linear-gradient(180deg, #151922 0%, var(--bg-color) 100%);
+            border-bottom: 2px solid #282c37;
         }
-        header h1 {
-            font-size: 3rem;
-            margin: 0 0 1rem 0;
+
+        h1 {
+            font-family: 'Teko', sans-serif;
+            font-size: 4rem;
             text-transform: uppercase;
+            color: var(--primary-color);
+            margin: 0;
             letter-spacing: 2px;
+            line-height: 1;
         }
-        header p {
-            font-size: 1.2rem;
-            color: var(--text-muted);
-            max-width: 600px;
-            margin: 0 auto;
-        }
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 2rem;
-            background: var(--container-bg);
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
-            margin-top: -3rem; /* Overlaps the header slightly */
-            position: relative;
-            margin-bottom: 2rem;
-        }
-        h2 {
-            border-bottom: 2px solid #2d3340;
-            padding-bottom: 0.5em;
-            color: #ffffff;
-        }
-        .media-placeholder {
-            width: 100%;
-            height: 350px;
-            background-color: #2d3340;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 6px;
-            margin: 1.5rem 0;
-            color: var(--text-muted);
-            border: 2px dashed #475569;
-        }
-        ul {
-            list-style-type: square;
-            color: var(--text-muted);
-        }
-        li {
-            margin-bottom: 0.5rem;
-        }
-        li strong {
-            color: var(--text-color);
-        }
-        .button-group {
-            display: flex;
-            gap: 1rem;
-            margin-top: 2rem;
-            flex-wrap: wrap;
-        }
-        .btn {
-            display: inline-block;
-            background-color: var(--primary-color);
-            color: white;
-            padding: 12px 24px;
-            border-radius: 4px;
+
+        p.subtitle {
+            font-size: 1.25rem;
+            color: var(--heading-color);
             font-weight: 600;
-            text-decoration: none;
+            margin-top: 0.5rem;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            height: 0;
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 8px 24px rgba(255, 153, 0, 0.15);
+            border: 1px solid #2d3748;
+            margin-bottom: 2.5rem;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        .content-card {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border: 1px solid #2d3748;
+        }
+
+        h2 {
+            font-family: 'Teko', sans-serif;
+            font-size: 2.2rem;
+            color: var(--heading-color);
+            margin-top: 0;
             text-transform: uppercase;
             letter-spacing: 1px;
-            transition: transform 0.2s, background-color 0.2s;
+            border-bottom: 2px solid var(--primary-color);
+            display: inline-block;
+            padding-bottom: 0.2rem;
         }
-        .btn-secondary {
-            background-color: #2d3340;
+
+        ul.features {
+            list-style: none;
+            padding: 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
         }
-        .btn:hover {
-            transform: translateY(-2px);
-            background-color: #ff6b77;
+
+        ul.features li {
+            background: #121820;
+            padding: 1.25rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--primary-color);
         }
-        .btn-secondary:hover {
-            background-color: #3b4354;
+
+        ul.features strong {
+            color: var(--heading-color);
+            display: block;
+            font-size: 1.1rem;
+            margin-bottom: 0.25rem;
         }
+
+        .cta-section {
+            text-align: center;
+            margin: 3rem 0;
+        }
+
+        .play-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            background-color: var(--primary-color);
+            color: #000000;
+            font-weight: 700;
+            font-size: 1.2rem;
+            padding: 1rem 2.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            text-transform: uppercase;
+            transition: all 0.2s ease-in-out;
+            box-shadow: 0 4px 15px rgba(255, 153, 0, 0.4);
+        }
+
+        .play-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(255, 153, 0, 0.6);
+            background-color: #ffa826;
+        }
+
         footer {
             text-align: center;
             padding: 2rem;
-            color: var(--text-muted);
-            font-size: 0.9em;
+            font-size: 0.9rem;
+            color: #666;
+            border-top: 1px solid #1a202c;
         }
+
         footer a {
             color: var(--primary-color);
             text-decoration: none;
@@ -124,36 +164,50 @@
 <body>
 
     <header>
-        <h1>OneDevX</h1>
-        <p>A solo developer's journey into creating immersive worlds. Powered by Unity and OneDevX tools.</p>
+        <h1>Dirt Kings</h1>
+        <p class="subtitle">60FPS Mobile Off-Road Racing Game by OneDevX</p>
     </header>
 
     <div class="container">
-        <h2>Gameplay Trailer</h2>
-        <!-- Replace this div with an iframe for your YouTube trailer -->
-        <div class="media-placeholder">
-            [ YouTube Trailer or Gameplay GIF Placeholder ]
+        <!-- Official Game Trailer -->
+        <div class="video-container">
+            <iframe 
+                src="https://www.youtube.com/embed/SQoOxQimr7I" 
+                title="Dirt Kings Off-Road Racing Trailer" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+            </iframe>
         </div>
 
-        <h2>About the Game</h2>
-        <p>Welcome to the official hub. This project is a passion-driven indie title focused on delivering tight mechanics and atmospheric storytelling, currently in active development.</p>
-        
-        <h2>Key Features</h2>
-        <ul>
-            <li><strong>Dynamic Combat:</strong> Fast-paced, responsive action.</li>
-            <li><strong>Atmospheric World:</strong> Explore a handcrafted environment built with OneDevX tools.</li>
-            <li><strong>Original Soundtrack:</strong> Immersive audio tailored to every biome.</li>
-        </ul>
+        <!-- Download Button -->
+        <div class="cta-section">
+            <a href="https://play.google.com/store/apps/details?id=com.OneDevX.DirtKings" target="_blank" class="play-btn">
+                 Get it on Google Play
+            </a>
+        </div>
 
-        <div class="button-group">
-            <a href="#" class="btn">Wishlist on Steam</a>
-            <a href="#" class="btn btn-secondary">Play Demo on Itch.io</a>
-            <a href="https://github.com/solodevunity-cs/onedevx" class="btn btn-secondary">GitHub Repo</a>
+        <!-- Features Overview -->
+        <div class="content-card">
+            <h2>Key Game Features</h2>
+            <ul class="features">
+                <li>
+                    <strong>PC-Quality Mobile Graphics</strong>
+                    High-fidelity visual performance running smoothly at 60 FPS.
+                </li>
+                <li>
+                    <strong>Dynamic Weather System</strong>
+                    Adapt to evolving weather conditions across different race tracks.
+                </li>
+                <li>
+                    <strong>Extreme Off-Road Conditions</strong>
+                    Conquer muddy terrain, intense obstacle courses, and high-octane tracks.
+                </li>
+            </ul>
         </div>
     </div>
 
     <footer>
-        <p>&copy; 2026 solodevunity-cs. Follow the development on <a href="#">Twitter</a> or <a href="#">Discord</a>.</p>
+        <p>&copy; 2026 OneDevX. Built for Android devices.</p>
     </footer>
 
 </body>
